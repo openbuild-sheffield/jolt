@@ -1,3 +1,7 @@
+#Ignore the main config file - should be copied from config.plist.dist
+config.plist
+
+#Common mac stuff
 .DS_Store
 .AppleDouble
 .LSOverride
