@@ -147,7 +147,7 @@ open class OBMySQL {
         }
 
         let mysqlStatement = MySQLStmt(mysql)
-        //LEWIS
+
         mysqlStatement.reset()
 
         let queryPrepare = mysqlStatement.prepare(statement: statement)
