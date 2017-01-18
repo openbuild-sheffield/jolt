@@ -1,0 +1,11 @@
+#%RAML 1.0
+mediaType: application/json
+types: {% for raml in generic %}
+  {{ raml.name }}:
+    type: object
+    properties:
+{% for line in raml.docs %}      {{ line }}{% if not forloop.last %}
+{% endif %}{% endfor %}{% endfor %}{% for uri in uris %}
+{{ uri.uri }}:{% for method in uri.methods %}
+{% for line in method.docs %}{{ line }}{% if not forloop.last %}
+{% endif %}{% endfor %}{% endfor %}{% endfor %}
