@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" value="text/html;charset=utf8">
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+        <meta name="generator" content="Openbuild">
+        <title>{{ page_title }}</title>
+        <meta name="description" content="{{ page_description }}">
+    </head>
+    <body>
+        <header>
+            <h1>{{page_title}}</h1>
+            {{header}}
+        </header>
+        {% if content is String %}
+            <artical>
+                {{content}}
+            </artical>
+        {% endif %}
+        <footer>
+            {{footer}}
+        </footer>
+    </body>
+</html>
