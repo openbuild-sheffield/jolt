@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Name</key>
+    <string>cms</string>
+    <key>Install</key>
+    <string>RouteCMS.Installer</string>
+    <key>DataConnection</key>
+    <dict>
+        <key>Type</key>
+        <string>mysql</string>
+        <key>Connection</key>
+        <string>local</string>
+    </dict>
+    <key>Routes</key>
+    <array>
+        <string>RouteCMS.RouteGenerateHTMLFromMarkdown</string>
+        <string>RouteCMS.RouteCMSMarkdownAdd</string>
+        <string>RouteCMS.RouteCMSMarkdownGet</string>
+        <string>RouteCMS.RouteCMSMarkdownUpdate</string>
+        <string>RouteCMS.RouteCMSMarkdownDelete</string>
+        <string>RouteCMS.RouteCMSWordsAdd</string>
+        <string>RouteCMS.RouteCMSWordsGet</string>
+        <string>RouteCMS.RouteCMSWordsUpdate</string>
+        <string>RouteCMS.RouteCMSWordsDelete</string>
+
+        <string>RouteCMS.RouteCMSPageAdd</string>
+
+    </array>
+</dict>
+</plist>
