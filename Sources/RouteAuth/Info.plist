@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Name</key>
+    <string>auth</string>
+    <key>Install</key>
+    <string>RouteAuth.Installer</string>
+    <key>DataConnection</key>
+    <dict>
+        <key>Type</key>
+        <string>mysql</string>
+        <key>Connection</key>
+        <string>local</string>
+    </dict>
+    <key>Requires</key>
+    <array>
+        <string>role</string>
+    </array>
+    <key>Routes</key>
+    <array>
+        <string>RouteAuth.RouteAuthLogin</string>
+        <string>RouteAuth.RouteAuthLogout</string>
+        <string>RouteAuth.RouteAuthUpdateEmail</string>
+        <string>RouteAuth.RouteAuthUpdatePassword</string>
+        <string>RouteAuth.RouteRoleAdd</string>
+        <string>RouteAuth.RouteRoleGet</string>
+        <string>RouteAuth.RouteRoleUpdate</string>
+        <string>RouteAuth.RouteRoleDelete</string>
+        <string>RouteAuth.RouteRolesGet</string>
+        <string>RouteAuth.RouteUserAdd</string>
+        <string>RouteAuth.RouteUserGet</string>
+        <string>RouteAuth.RouteUsersGet</string>
+        <string>RouteAuth.RouteUserRoleAdd</string>
+        <string>RouteAuth.RouteUserRoleDelete</string>
+    </array>
+</dict>
+</plist>
