@@ -19,6 +19,10 @@ sudo apt-get install libmarkdown2-dev
 sudo apt-get install mysql-server
 ```
 
+### Create config
+
+You will need to copy file config.plist.dist to config.plist and amend as required.  This file sets the theme to use, the datastore connection details, security details and modules to load, [more details to follow later](https://github.com/openbuild-sheffield/jolt/wiki/Main-config) in the wiki. 
+
 ## Code Structure
 
 The code is build using standard modules as per Swifts documentation and most of the the code resides in 'Sources' directory.  Items outside of 'Sources' can be edited when the application is running.
