@@ -7,8 +7,14 @@ Currently needs MySQL as the database and the discount lib for generating Markdo
 
 ### Install Mac OS X
 
-```brew install discount
+```
+brew install discount
 brew install mysql
 ```
 
 ### Install Linux
+
+```
+sudo apt-get install libmarkdown2-dev
+sudo apt-get install mysql-server
+```
