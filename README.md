@@ -1,4 +1,4 @@
-# jolt
+# Jolt
 Swift web API and CMS that includes public documentation.
 
 ## Install
@@ -18,3 +18,6 @@ brew install mysql
 sudo apt-get install libmarkdown2-dev
 sudo apt-get install mysql-server
 ```
+## License
+
+Jolt is licensed under the GPL2 license. See [LICENSE](LICENSE) for more info.
