@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Name</key>
+    <string>stencil</string>
+    <key>Routes</key>
+    <array>
+        <string>RouteStencil.RouteStencilRAML</string>
+        <string>RouteStencil.RouteStencilSiteMap</string>
+        <string>RouteStencil.RouteStencilCMSHome</string>
+        <string>RouteStencil.RouteStencilCMS</string>
+    </array>
+</dict>
+</plist>
