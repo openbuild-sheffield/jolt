@@ -41,7 +41,7 @@ Views are unthemed and unstyled, currently has sitemap.xml and api.raml
 
 ### Sources
 
-Contains the core Swift code and additional modules.  The 'Application' directory and anything prefixed with 'Openbuild' is core to the framework.  Anything prefixed with 'Route' can be considered an optional module that plugs in functionality to the system.
+Contains the core Swift code and additional modules.  The 'Application' directory and anything prefixed with 'Openbuild' is core to the framework.  Anything prefixed with 'Route' can be considered an optional module that plugs in functionality to the system.  The [documentation for creating a module](https://github.com/openbuild-sheffield/jolt/wiki/Create-Module) can be found in the wiki, work in progress... 
 
 ## Building the application
 
