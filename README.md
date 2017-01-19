@@ -1,5 +1,5 @@
 # Jolt
-Swift web API and CMS that includes public documentation.
+Swift web API and CMS that includes public documentation, built on top of the [Perfect](http://perfect.org) toolkit and utilising the [Stencil](https://github.com/kylef/Stencil) template system, you can develop applications rapidly and securely with the additional benift of [RAML documentation](http://raml.org). 
 
 ## Install
 
