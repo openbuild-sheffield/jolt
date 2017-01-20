@@ -60,7 +60,7 @@ let package = Package(
                 "RepositoryAuth"
             ]
         ),
-        Target(name: "OpenbuildMysql", dependencies: ["OpenbuildRepository"]),
+        Target(name: "OpenbuildMysql", dependencies: ["OpenbuildExtensionCore", "OpenbuildRepository"]),
         Target(
             name: "OpenbuildRepository"
         ),
