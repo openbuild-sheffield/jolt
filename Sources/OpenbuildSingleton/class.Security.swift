@@ -141,7 +141,7 @@ public class Security {
 
     }
 
-    public func JWTDecode(secret: String, encodedToken: String) throws -> [String:Any]? {
+    public func JWTDecode(secret: String, encodedToken: String) throws -> JWT.ClaimSet? {
 
         let saltedSecret = secret + self.secret
 
@@ -151,7 +151,7 @@ public class Security {
                 JWT.Algorithm.hs256(saltedSecret.data(using: .utf8)!),
                 JWT.Algorithm.hs256(saltedSecret.data(using: .utf8)!),
                 JWT.Algorithm.hs512(saltedSecret.data(using: .utf8)!)
-            ])
+            ]) as JWT.ClaimSet
 
             return decoded
 
@@ -164,27 +164,30 @@ public class Security {
 
     }
 
-    public func JWTValidate(decodedToken: [String:Any], audience: String, claims: [String:Any]?=nil) -> Bool? {
+    public func JWTValidate(claimSet: JWT.ClaimSet, audience: String, claims: [String:Any]?=nil) -> Bool? {
 
-        //FIXME - TODO - Waiting on upstream changes...
-        return true
+        do {
 
-/*
-        _ = JWT.validateClaims(
-            decodedToken,
-            audience: audience,
-            issuer: self.issuer
-        )
+            try claimSet.validateExpiary()
+            try claimSet.validateNotBefore()
+            try claimSet.validateIssuedAt()
 
-        if claims != nil {
-            for (key, value) in claims! {
-                if String(describing: decodedToken[key]!) != String(describing: value) {
-                    print("Invalid JWT claim \(key), expected: \(value) got: \(decodedToken[key]!)")
-                    return nil
+            try claimSet.validateAudience(audience)
+            try claimSet.validateIssuer(self.issuer)
+
+            if claims != nil {
+                for (key, value) in claims! {
+                    if String(describing: claimSet[key]!) != String(describing: value) {
+                        print("Invalid JWT claim \(key), expected: \(value) got: \(claimSet[key]!)")
+                        return false
+                    }
                 }
             }
+
+        } catch {
+            return false
         }
-*/
+
         return true
 
     }

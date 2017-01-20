@@ -4,6 +4,7 @@ import PerfectHTTPServer
 import OpenbuildExtensionCore
 import OpenbuildSingleton
 import RepositoryAuth
+import JWT
 
 public extension HTTPRequest {
 
@@ -12,7 +13,7 @@ public extension HTTPRequest {
     }
 
     //Returns a  decoded JTW token
-    public var decodedToken: [String:Any]? {
+    public var decodedToken: JWT.ClaimSet? {
 
         do{
 
@@ -28,17 +29,17 @@ public extension HTTPRequest {
 
                     let security = OpenbuildSingleton.Manager.getSecurity()
 
-                    guard var decoded = try security.JWTDecode(secret: modelToken!.secret, encodedToken: modelToken!.token) else {
+                    guard var claimSet = try security.JWTDecode(secret: modelToken!.secret, encodedToken: modelToken!.token) else {
                         return nil
                     }
 
-                    if security.JWTValidate(decodedToken: decoded, audience: security.getDefaultAudience(), claims: security.getDefaultClaims()) == false {
+                    if security.JWTValidate(claimSet: claimSet, audience: security.getDefaultAudience(), claims: security.getDefaultClaims()) == false {
                         return nil
                     }
 
-                    if decoded["data"] != nil {
+                    if claimSet["data"] != nil {
 
-                        var decodedData = decoded["data"]! as! [String:Any]
+                        var decodedData = claimSet["data"]! as! [String:Any]
 
                         if decodedData["user"] != nil {
 
@@ -51,11 +52,11 @@ public extension HTTPRequest {
                             }
                         }
 
-                        decoded["data"] = decodedData
+                        claimSet["data"] = decodedData
 
                     }
 
-                    return decoded
+                    return claimSet
 
                 }
 

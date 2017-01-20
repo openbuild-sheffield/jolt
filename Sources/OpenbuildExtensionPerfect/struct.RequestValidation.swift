@@ -1,5 +1,6 @@
 import PerfectLib
 import PerfectHTTP
+import JWT
 
 public struct RequestValidation {
 
@@ -84,7 +85,7 @@ print("DO VALIDATION \(data)")
         let uriData = self.raw?["uri"] as? [String: Any]
         let bodyData = self.raw?["body"] as? [String: Any]
         let fileData = self.raw?["files"] as? [String: Any]
-        let token = self.raw?["token"] as? [String: Any]
+        let token = self.raw?["token"] as? JWT.ClaimSet
         let tokenData = token?["data"] as? [String: [String: Any]]
 
 print("")
