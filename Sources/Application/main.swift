@@ -190,6 +190,12 @@ do {
 
 }
 
+//Challenge for http://letsencrypt.org certs
+routes.add(method: .get, uri: ".well-known/acme-challenge", handler: { request, response in
+    response.setBody(string: "well-known/acme-challenge was called")
+    response.completed()
+})
+
 print("")
 
 //Configure server with CLI options
