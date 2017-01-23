@@ -5,7 +5,6 @@ let versions = Version(0,0,0)..<Version(10,0,0)
 let urls = [
     "https://github.com/PerfectlySoft/Perfect-HTTPServer.git",
     "https://github.com/PerfectlySoft/Perfect-MySQL.git",
-    "https://github.com/krzyzanowskim/CryptoSwift.git",
     "https://github.com/kylef/JSONWebToken.swift.git",
     "https://github.com/kylef/Stencil.git",
     "https://github.com/crossroadlabs/Markdown.git"
