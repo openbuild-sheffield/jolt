@@ -1,0 +1,30 @@
+{
+  "name": "jolt",
+  "version": "0.0.1",
+  "description": "Swift API and CMS",
+  "keywords": [
+    "swift",
+    "api",
+    "raml",
+    "cms"
+  ],
+  "homepage": "https://github.com/openbuild-sheffield/jolt",
+  "bugs": {
+    "url": "https://github.com/openbuild-sheffield/jolt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/openbuild-sheffield/jolt.git"
+  },
+  "license": "GPL-2.0",
+  "author": "Danny Lewis",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-batch": "1.0.5",
+    "gulp-concat": "2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-watch": "4.3.11",
+    "require-dir": "^0.3.1"
+  }
+}
