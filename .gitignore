@@ -1,6 +1,9 @@
 #Ignore the main config file - should be copied from config.plist.dist
 config.plist
 
+#Ignore node modules
+node_modules/
+
 #Common mac stuff
 .DS_Store
 .AppleDouble
