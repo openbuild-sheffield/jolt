@@ -86,6 +86,30 @@ swift build --clean
 swift build --clean=dist
 ```
 
+## Web assets
+
+The code includes node gulp scripts to help with css and javascript files, you will need to install node and npm.
+
+To install the scripts run:
+
+```
+npm install
+
+#You can then optionally do the following:
+
+#Watch the file system for changes to sass and js file, then test and concat
+gulp watch
+
+#Review the files - js only at present with jslint
+gulp review
+
+#Build the css and js file
+gulp build
+
+```
+
+Your javascript and sass files are stored in the WebSource directory
+
 ## License
 
 Jolt is licensed under the GPL2 license. See [LICENSE](LICENSE) for more info.
