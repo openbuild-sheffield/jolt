@@ -1,6 +1,10 @@
 # Jolt
 Swift web API and CMS that includes public documentation, built on top of the [Perfect](http://perfect.org) toolkit and utilising the [Stencil](https://github.com/kylef/Stencil) template system, you can develop applications rapidly and securely with the additional benefit of [RAML documentation](http://raml.org).
 
+Automatically creates routes:
+* /api.raml - For serving developer documentation, more formats to follow
+* /sitemap.xml -
+
 ## Install
 
 Currently needs MySQL as the database and the discount lib for generating Markdown
@@ -109,6 +113,10 @@ gulp build
 ```
 
 Your javascript and sass files are stored in the WebSource directory
+
+## Notes
+
+Current focus is on creating APIs and documentation, CMS and additional modules later...
 
 ## License
 
