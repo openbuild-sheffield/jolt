@@ -8,5 +8,6 @@ module.exports = {
   javascript: appRoot + 'javascript/**/*.js',
   style: appRoot + 'sass/**/*.sass',
   output: outputRoot,
-  sourceMapRelativePath: '../' + appRoot
+  sourceMapRelativePath: '../' + appRoot,
+  themes: 'Themes'
 };
