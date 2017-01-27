@@ -63,6 +63,10 @@ Build:
 
 ```
 swift build
+
+#Or if you are using the gulp scripts
+gulp build-swift-dev
+
 ```
 
 Run:
@@ -77,6 +81,10 @@ To build a production ready release version, you would issue the command
 
 ```
 swift build -c release
+
+#Or if you are using the gulp scripts
+gulp build-swift-release
+
 ```
 
 This will place the resulting executable in the .build/release/ directory.
