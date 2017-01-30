@@ -107,6 +107,10 @@ To install the scripts run:
 ```
 npm install
 
+npm install jspm -g
+
+jspm install -y
+
 #You can then optionally do the following:
 
 #Watch the file system for changes to sass and js file, then test and concat
