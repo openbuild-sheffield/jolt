@@ -4,6 +4,9 @@ config.plist
 #Ignore node modules
 node_modules/
 
+#Ignore jspm packages
+jspm_packages/
+
 #Common mac stuff
 .DS_Store
 .AppleDouble
