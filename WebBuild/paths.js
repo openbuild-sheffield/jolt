@@ -8,6 +8,7 @@ module.exports = {
   javascript: appRoot + 'javascript/**/*.js',
   javascriptLib: appRoot + 'javascript/_libs.js',
   style: appRoot + 'sass/**/*.sass',
+  jspm: appRoot + 'jspm_packages',
   output: outputRoot,
   sourceMapRelativePath: '../' + appRoot,
   themes: 'Themes'
