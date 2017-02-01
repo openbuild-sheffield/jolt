@@ -1,0 +1,3 @@
+module.exports = {
+    site_map: "https://www.theregister.co.uk/sitemap.xml"
+}
