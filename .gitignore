@@ -7,6 +7,9 @@ node_modules/
 #Ignore jspm packages
 jspm_packages/
 
+#Ignore WebBuild/uris.js - WebBuild/uris.js.dist should be copied and amended to WebBuild/uris.js
+WebBuild/uris.js
+
 #Common mac stuff
 .DS_Store
 .AppleDouble
