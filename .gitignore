@@ -10,6 +10,13 @@ jspm_packages/
 #Ignore WebBuild/uris.js - WebBuild/uris.js.dist should be copied and amended to WebBuild/uris.js
 WebBuild/uris.js
 
+#Ignore site specific javascript
+WebSource/javascript/*.js
+
+#Ignore scss site specific files
+WebSource/sass/_jspm
+WebSource/sass/site/*.scss
+
 #Common mac stuff
 .DS_Store
 .AppleDouble
