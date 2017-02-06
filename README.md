@@ -107,7 +107,8 @@ To install the scripts run:
 ```
 npm install
 
-npm install jspm -g
+npm install -g jspm
+npm install -g modernizr
 
 jspm install -y
 
